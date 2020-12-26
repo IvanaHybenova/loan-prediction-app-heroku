@@ -48,11 +48,11 @@ def load_saved_artifacts():
     path = os.path.dirname(__file__) 
     artifacts = os.path.join(path, "artifacts")
     print(artifacts)
-    with open(artifacts[0]+"/columns.json", "r") as f:
+    with open(artifacts+"/columns.json", "r") as f:
         __data_columns = json.load(f)['data_columns']
         
     global __model
-    with open(artifacts[0]+"/loans_model.pickle", 'rb') as f:
+    with open(artifacts+"/loans_model.pickle", 'rb') as f:
         __model = pickle.load(f)
     print("loading saved artifacts...done")
 
