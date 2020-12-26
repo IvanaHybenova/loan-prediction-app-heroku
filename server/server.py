@@ -7,9 +7,8 @@ Created on Wed Dec 23 18:33:25 2020
 
  
 from flask import Flask, request, jsonify, render_template
-#import server.util as util
-import util
-import numpy as np
+import server.util as util
+# import util
 
 app = Flask(__name__, static_url_path="/client", static_folder='../client', template_folder="../client")
 
@@ -50,4 +49,5 @@ def estimate_loan_status():
     return response
 
 if __name__ == '__main__':
+    print("Starting Python Flask Server For Loan Status Prediction...")
     app.run(debug=True)
