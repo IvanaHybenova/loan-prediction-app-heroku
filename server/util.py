@@ -47,7 +47,7 @@ def load_saved_artifacts():
     
     path = os.path.dirname(__file__) 
     artifacts = os.path.join(path, "artifacts")
-    print(artifacts[0])
+    print(artifacts)
     with open(artifacts[0]+"/columns.json", "r") as f:
         __data_columns = json.load(f)['data_columns']
         
