@@ -8,6 +8,7 @@ Created on Wed Dec 23 18:50:08 2020
 import json
 import pickle
 import numpy as np
+import os
 
 __data_columns = None
 __model = None
@@ -44,11 +45,14 @@ def load_saved_artifacts():
     print("loading saved artifacts...start")
     global __data_columns
     
-    with open("./artifacts/columns.json", 'r') as f:
+    path = os.path.dirname(__file__) 
+    artifacts = os.path.join(path, "artifacts")
+    
+    with open(artifacts[0]+"/columns.json", "r") as f:
         __data_columns = json.load(f)['data_columns']
         
     global __model
-    with open("./artifacts/loans_model.pickle", 'rb') as f:
+    with open(artifacts[0]+"/loans_model.pickle", 'rb') as f:
         __model = pickle.load(f)
     print("loading saved artifacts...done")
 
