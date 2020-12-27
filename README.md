@@ -1,5 +1,6 @@
 # loan-prediction-app-heroku
-An API for a classification model to predict loan status deployed on Heroku
+An API for a classification model to predict loan status deployed on Heroku. 
+https://loan-prediction-app-heroku.herokuapp.com/
 
 ## Content
 A loan application is used by borrowers to apply for a loan. 
